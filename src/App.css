@@ -82,17 +82,14 @@ body {
   width: 50%;
   float: left;
   padding: 20px;
-  //border: 2px solid;
+  
  
-//}
-
+}
 .tag {
     color: #266A61;
 }
 
-//#tagline {
-    margin-top:20px;
-}
+
 
 .btn {
     color: #FFFFFF;
