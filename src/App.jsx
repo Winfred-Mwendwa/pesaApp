@@ -1,11 +1,19 @@
 
 import './App.css'
+import React, {useState,setState} from 'react';
+
+
+import RegistrationForm from './components/registration/Registration';
 
 
 import { Header} from './components'
 
 
+
+
 function App() {
+    
+    
     return (
       <div className="">
         <main className=" container">
@@ -29,7 +37,7 @@ function App() {
                 <li>Send!</li>
               </ol>
               <div>
-              <button type="button" class="btn btn-outline-success">Get Started</button>
+              <RegistrationForm />
               </div>
               
               </div>
