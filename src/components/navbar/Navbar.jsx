@@ -12,9 +12,7 @@ function Navbar () {
                <li class="nav-item">
                   <a href="#home" class="nav-link">Sign in</a>
                </li>
-               <li class="nav-item">
-                  <a href="#search" class="nav-link">Sign up</a>
-               </li>
+               
                
             </ul>
             <div class="hamburger">
