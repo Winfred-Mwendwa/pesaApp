@@ -43,7 +43,7 @@ function App() {
               </div>
 
               <div className='float-child '>
-              <img src="src/undraw_transfer_money_re_6o1h.svg" alt="" />
+              <img src='/src/undraw_mobile_pay_re_sjb8.svg' alt="" />
               </div>
               
               
