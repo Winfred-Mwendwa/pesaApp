@@ -3,11 +3,11 @@ import './App.css'
 import React, {useState,setState} from 'react';
 
 
-import RegistrationForm from './components/registration/Registration';
 
 
-import { Header} from './components'
 
+import {Header} from './components';
+import {RegistrationForm} from './components';
 
 
 
