@@ -1,123 +1,198 @@
-import React, {useState,setState} from 'react';
-import {database} from '/src/firebase'
-import {ref,push,child,update} from "firebase/database";
-import './Registration.css'
+import { signInWithEmailAndPassword, signInWithGoogle, registerWithEmailAndPassword } from "../../firebase"
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
+import React, { useState } from "react";
+
 function RegistrationForm() {
     
-    const [firstName, setFirstName] = useState(null);
-    const [lastName, setLastName] = useState(null);
-    const [email, setEmail] = useState(null);
-    const [phone, setPhone] = useState(null);
-    const [password,setPassword] = useState(null);
-    const [confirmPassword,setConfirmPassword] = useState(null);
+    const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    const handleInputChange = (e) => {
-        const {id , value} = e.target;
-        if(id === "firstName"){
-            setFirstName(value);
-        }
-        if(id === "lastName"){
-            setLastName(value);
-        }
-        if(id === "phone"){
-            setPhone(value);
-        }
-        if(id === "email"){
-            setEmail(value);
-        }
-        if(id === "password"){
-            setPassword(value);
-        }
-        if(id === "confirmPassword"){
-            setConfirmPassword(value);
-        }
-        
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [phone, setPhone] = useState("");
 
+  
 
+    
 
-    }
-
-    const handleSubmit  = () => {
-        
-        console.log(firstName,lastName,phone,email,password,confirmPassword);
-        let obj = {
-            firstName : firstName,
-            lastName:lastName,
-            phone:phone,
-            email:email,
-            password:password,
-            confirmPassword:confirmPassword,
-        }       
-    const newPostKey = push(child(ref(database), 'posts')).key;
-    const updates = {};
-    updates['/' + newPostKey] = obj
-    return update(ref(database), updates);
-    }
+    
 
     return(
         <div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Get Started
-              </button>
+            
 
 
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                      
-                    </div>
-                    <div class="modal-body">
-                                <div className="form">
-                                    <div className="form-body">
-                                        <div className="username">
-                                            <label className="form__label" for="firstName">First Name </label>
-                                            <input className="form__input" type="text" value={firstName} onChange = {(e) => handleInputChange(e)} id="firstName" placeholder="First Name" required/>
-                                        </div>
-                                        <div className="lastname">
-                                            <label className="form__label" for="lastName">Last Name </label>
-                                            <input  type="text" name="" id="lastName" value={lastName}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="Last Name" required/>
-                                        </div>
-                                        <div className="phone">
-                                            <label className="form__label" for="phone">Phone Number </label>
-                                            <input  type="phone" name="" id="phone" value={phone}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="+25471234567" required/>
-                                        </div>
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">User Registration</h1>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">close</button>
+      </div>
+      <div class="modal-body">
+      <div className="container-fluid" >
+      <div className="row">
+        <div className="col col-2"></div>
+        <div className="col col-12">
+          <div className="row">
+        
+            <div className="col col-12">
+              <Card>
+                <Card.Body>
+                  <Card.Title></Card.Title>
+                  <Card.Text>First time visiting? Register Here</Card.Text>
+                  <div>
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control
+                        type="name"
+                        placeholder="Enter name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="johndoe@gmail.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                      <Form.Label>Phone</Form.Label>
+                      <Form.Control
+                        type="phone"
+                        placeholder="0712345678"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
+                    </Form.Group>
 
-                                        <div className="email">
-                                            <label className="form__label" for="email">Email </label>
-                                            <input  type="email" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email" required/>
-                                        </div>
-                                        <div className="password">
-                                            <label className="form__label" for="password">Password </label>
-                                            <input className="form__input" type="password"  id="password" value={password} onChange = {(e) => handleInputChange(e)} placeholder="Password" required/>
-                                        </div>
-                                        <div className="confirm-password">
-                                            <label className="form__label" for="confirmPassword">Confirm Password </label>
-                                            <input className="form__input" type="password" id="confirmPassword" value={confirmPassword} onChange = {(e) => handleInputChange(e)} placeholder="Confirm Password" required/>
-                                        </div>
-                                    </div>
-                        <div class="footer">
-                            <button onClick={()=>handleSubmit()} type="submit" class="btn">Register</button>
-                        </div>
-                    </div>
-                    </div>
-       
-          
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                    </Form.Group>
+                    <hr style={{ margin: "5%" }} />
 
-
-
-                    <div class="modal-footer">
-                      <button onClick={()=>handleSubmit()} type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      
+                    <div className="d-grid gap-2">
+                      <Button
+                        variant="outline-danger"
+                        type="submit"
+                        onClick={() => {
+                          registerWithEmailAndPassword(name, email, password);
+                        }}
+                      >
+                        Register
+                      </Button>
                     </div>
                   </div>
-                </div>
-                </div>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
         </div>
-        
-               
+        <div className="col-col-2"></div>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-target="#exampleModalToggle2" data-toggle="modal">Already have an account? Log in</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Log In</h1>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+      <div class="modal-body">
+      <div className="container-fluid" style={{ marginTop: "10%" }}>
+      <div className="row">
+        <div className="col col-2"></div>
+        <div className="col col-12">
+          <div className="row">
+            <div className="col col-12">
+              <Card>
+                <Card.Body>
+                  <Card.Title>User Login</Card.Title>
+                  <div>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter email"
+                        value={loginEmail}
+                        onChange={(e) => setLoginEmail(e.target.value)}
+                      />
+                      <Form.Text className="text-muted">
+                        View our Privacy Policy
+                      </Form.Text>
+                    </Form.Group>
 
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="Password"
+                        value={loginPassword}
+                        onChange={(e) => setLoginPassword(e.target.value)}
+                      />
+                    </Form.Group>
+                    <hr style={{ margin: "5%" }} />
+
+                    <div className="d-grid gap-2">
+                      <Button
+                        variant="outline-success"
+                        type="submit"
+                        onClick={() => {
+                          signInWithEmailAndPassword(loginEmail, loginPassword);
+                        }}
+                      >
+                        Login
+                      </Button>
+                      <Button
+                        variant="outline-primary"
+                        onClick={signInWithGoogle}
+                      >
+                        <i className="fab fa-google"></i>Sign-in with Goolge
+                      </Button>
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col col-6">
+              
+            </div>
+          </div>
+        </div>
+        <div className="col-col-2"></div>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn btn-primary" data-toggle="modal" href="#exampleModalToggle" role="button">Get Started</a>
+               
+</div>
                    
     )       
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../login';
 
 import './Navbar.css';
 
@@ -10,7 +11,7 @@ function Navbar () {
             <a href="#" class="nav-branding">pesaApp</a>
             <ul class="nav-menu">
                <li class="nav-item">
-                  <a href="#home" class="nav-link">Sign in</a>
+                  
                </li>
                
                
