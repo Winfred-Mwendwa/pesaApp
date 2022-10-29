@@ -35,6 +35,10 @@ function Dashboard() {
           Logout
          </button>
        </div>
+<div>
+  <img src="/src/wallet.svg" alt="wallet" />
+</div>
+
      </div>
   );
 }
