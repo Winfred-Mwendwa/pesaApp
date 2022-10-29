@@ -31,8 +31,6 @@ function Landingpage () {
                         <img src="/src/moneytransfer.svg" alt="mobile money transfer" />
                     </div>
                 </div>
-                
-            
             </div>
             <footer className='text-center fixed-bottom'>
                 <p>Contact Support</p>
