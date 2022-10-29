@@ -27,7 +27,7 @@ import { getDatabase } from "firebase/database"
 export const database = getDatabase(app);
 
 firebase.initializeApp(firebaseConfig);
-const db = getFirestore();
+export const db = getFirestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const auth = firebase.auth();
@@ -75,7 +75,7 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
   }
 };
 
- const sendPasswordResetEmail = async (email) => {
+ export const sendPasswordResetEmail = async (email) => {
   try {
      await auth.sendPasswordResetEmail(email);
      alert("Password reset link sent!");
@@ -84,6 +84,6 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
      alert(err.message);
    }
  };
- const logout = () => {
+ export const logout = () => {
    auth.signOut();
  };

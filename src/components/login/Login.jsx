@@ -1,159 +1,56 @@
-import { signInWithGoogle,signInWithEmailAndPassword,
-    registerWithEmailAndPassword } from "../../firebase";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import "./Login.css";
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) navigate("/dashboard");
+  }, [user, loading]);
+  return (
 
-  import Form from "react-bootstrap/Form";
-  import Button from "react-bootstrap/Button";
-  import Card from "react-bootstrap/Card";
-  
-  import React, { useState } from "react";
-  
-
-  
-  const Login = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-  
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPassword, setLoginPassword] = useState("");
     
-    return (
-        <>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Login
-</button>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        
-      </div>
-      <div class="modal-body">
-        ...
-        <div className="container-fluid" style={{ marginTop: "10%" }}>
-        <div className="row">
-          <div className="col col-2"></div>
-          <div className="col col-8">
-            <div className="row">
-              <div className="col col-6">
-                <Card>
-                  <Card.Body>
-                    <Card.Title>User Login</Card.Title>
-                    <div>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Enter email"
-                          value={loginEmail}
-                          onChange={(e) => setLoginEmail(e.target.value)}
-                        />
-                        <Form.Text className="text-muted">
-                          We'll never share your email with anyone else.
-                        </Form.Text>
-                      </Form.Group>
-  
-                      <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Password"
-                          value={loginPassword}
-                          onChange={(e) => setLoginPassword(e.target.value)}
-                        />
-                      </Form.Group>
-                      <hr style={{ margin: "5%" }} />
-  
-                      <div className="d-grid gap-2">
-                        <Button
-                          variant="outline-success"
-                          type="submit"
-                          onClick={() => {
-                            signInWithEmailAndPassword(loginEmail, loginPassword);
-                          }}
-                        >
-                          Login
-                        </Button>
-                        <Button
-                          variant="outline-primary"
-                          onClick={signInWithGoogle}
-                        >
-                          <i className="fab fa-google"></i>Sign-in with Goolge
-                        </Button>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col col-6">
-                <Card>
-                  <Card.Body>
-                    <Card.Title>User Registration</Card.Title>
-                    <Card.Text>First time visiting? register Here</Card.Text>
-                    <div>
-                      <Form.Group className="mb-3" controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control
-                          type="name"
-                          placeholder="Enter name"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Enter email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
-                      </Form.Group>
-  
-                      <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                        />
-                      </Form.Group>
-                      <hr style={{ margin: "5%" }} />
-  
-                      <div className="d-grid gap-2">
-                        <Button
-                          variant="outline-danger"
-                          type="submit"
-                          onClick={() => {
-                            registerWithEmailAndPassword(name, email, password);
-                          }}
-                        >
-                          Register
-                        </Button>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
-          </div>
-          <div className="col-col-2"></div>
+    <div className="login">
+      <div className="login__container">
+        <input
+          type="text"
+          className="login__textBox"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail Address"
+        />
+        <input
+          type="password"
+          className="login__textBox"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
+        <button
+          className="login__btn"
+          onClick={() => signInWithEmailAndPassword(email, password)}
+        >
+          Login
+        </button>
+        <button className="login__btn login__google" onClick={signInWithGoogle}>
+          Login with Google
+        </button>
+        <div>
+        <Link to="/reset">Forgot Password</Link>
+        </div>
+        <div>
+        Don't have an account? <Link to="/">Register</Link> now.
         </div>
       </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
-      </div>
     </div>
-  </div>
-</div>
-</>
-    )
-  };
-  
-  export default Login;
+  );
+}
+export default Login;
