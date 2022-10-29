@@ -78,13 +78,7 @@ body {
  
   
 }
-.float-child {
-  width: 50%;
-  float: left;
-  padding: 20px;
-  
- 
-}
+
 .tag {
     color: #266A61;
 }
@@ -95,16 +89,11 @@ body {
     color: #FFFFFF;
     background-color:  #266A61;
     }
-    .bubble::after {
-        content: '';
-        border-top-left-radius: 50% 100%;
-        border-top-right-radius: 50% 100%;
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        width: 100%;
-        background-color: #266A61;
-        height: 200px;
-    }
+
+footer {
+  background-color: #266A61;
+  height:200px;
+  
+}
 
     
