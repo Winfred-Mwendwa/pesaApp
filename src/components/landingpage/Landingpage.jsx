@@ -16,7 +16,7 @@ function Landingpage () {
             
             <div className='container text-center'>
               
-              <div className='float-child mt-5' id='tagline'>
+              <div className=' mt-5' id='tagline'>
               <h1 className='tag'>
               Send money in three easy steps!
               </h1>
@@ -31,7 +31,7 @@ function Landingpage () {
               
               </div>
 
-              <div className='float-child '>
+              <div className=' '>
               <img src="./src/undraw_transfer_money_re_6o1h.svg" alt="" />
               </div>
               
