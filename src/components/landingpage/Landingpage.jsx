@@ -33,8 +33,8 @@ function Landingpage () {
                 </div>
             </div>
             <footer className='text-center fixed-bottom'>
-                <p>Contact Support</p>
-                <p>Ts and Cs Apply</p>
+                <p>Contact <a href="#">Support</a></p>
+                <p><a href="#">Ts and Cs</a> Apply</p>
                 <div>
                     <i className="fa-brands fa-facebook icon"></i>
                     <i className="fa-brands fa-instagram icon"></i>
