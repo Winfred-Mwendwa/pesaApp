@@ -6,7 +6,7 @@ import Dashboard from "./dashboard";
 import Landingpage from "./landingpage";
 import Reset from "./reset/Reset";
 import Userlog from "./userlog/Userlog";
-import Paymentportal from "./payments/paymentportal";
+import Paymentportal from "./paymentportal/Paymentportal";
 import Topup from "./topup/Topup";
 
 export {
