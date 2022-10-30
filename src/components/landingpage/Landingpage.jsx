@@ -2,6 +2,7 @@ import React from "react";
 import '../../App.css'
 import Header from "../header";
 import RegistrationForm from "../registration/Registration";
+import Typical from 'react-typical'
 
 function Landingpage () {
     return (
@@ -21,6 +22,12 @@ function Landingpage () {
                             <li>Top up</li>
                             <li>Send!</li>
                         </ol>
+                        <Typical
+        steps={['Fast', 1000, 'Secure', 500, 'Seamless', 1000]}
+        loop={Infinity}
+        wrapper="h1"
+        
+      />
                     <div>
                         <RegistrationForm />
                     </div>
@@ -28,14 +35,18 @@ function Landingpage () {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" />
+                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" className="img-fluid" />
                     </div>
                 </div>
             </div>
             <footer className='text-center fixed-bottom'>
                 <p>Contact Support</p>
                 <p>Ts and Cs Apply</p>
-                <p>Socials</p>
+                <div>
+                <i class="fa-brands fa-facebook icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+                <i class="fab fa-twitter icon"></i>
+                </div>
             </footer>
         </div>
     

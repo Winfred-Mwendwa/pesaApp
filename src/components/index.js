@@ -5,6 +5,9 @@ import Login from "./login";
 import Dashboard from "./dashboard";
 import Landingpage from "./landingpage";
 import Reset from "./reset/Reset";
+import Userlog from "./userlog/Userlog";
+import Paymentportal from "./payments/paymentportal";
+import Topup from "./topup/Topup";
 
 export {
     Header,
@@ -13,7 +16,10 @@ export {
     Dashboard,
     Login,
     Landingpage,
-    Reset
+    Reset,
+    Userlog,
+    Paymentportal,
+    Topup
     
 
     

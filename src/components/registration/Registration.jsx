@@ -2,7 +2,7 @@ import { signInWithEmailAndPassword, signInWithGoogle, registerWithEmailAndPassw
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
+import { Link } from 'react-router-dom';
 import React, { useState } from "react";
 
 function RegistrationForm() {
@@ -31,7 +31,7 @@ function RegistrationForm() {
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalToggleLabel">User Registration</h1>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">close</button>
+        <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">close</button>
       </div>
       <div class="modal-body">
       <div className="container-fluid" >
@@ -107,7 +107,7 @@ function RegistrationForm() {
     </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-target="#exampleModalToggle2" data-toggle="modal">Already have an account? Log in</button>
+        <button class="btn btn-primary" data-target="#exampleModalToggle2" data-toggle="modal"><Link to="/login" >Already have an account? Log in</Link></button>
       </div>
     </div>
   </div>
