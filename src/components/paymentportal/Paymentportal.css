@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image:url('/images/money-2696219_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
   }
   .payment__container {
     display: flex;
