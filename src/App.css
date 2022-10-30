@@ -79,8 +79,9 @@ body {
   
 }
 
-.tag {
+h1 {
     color: #266A61;
+    
 }
 
 
@@ -91,9 +92,21 @@ body {
     }
 
 footer {
-  background-color: #266A61;
-  height:200px;
+  background-color:  #266A61;
+  height:100vh;
+  width:100%;
   
 }
+
+.icon {
+  display: inline-block;
+  margin: 5px;
+}
+
+.icon:hover {
+  color: white;
+  cursor: pointer;
+}
+
 
     

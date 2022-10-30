@@ -3,6 +3,7 @@ import '../../App.css'
 import Header from "../header";
 import RegistrationForm from "../registration/Registration";
 
+
 function Landingpage () {
     return (
         <div class="container text-center">
@@ -21,6 +22,7 @@ function Landingpage () {
                             <li>Top up</li>
                             <li>Send!</li>
                         </ol>
+                        
                     <div>
                         <RegistrationForm />
                     </div>
@@ -28,14 +30,18 @@ function Landingpage () {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" />
+                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" className="img-fluid" />
                     </div>
                 </div>
             </div>
             <footer className='text-center fixed-bottom'>
                 <p>Contact Support</p>
                 <p>Ts and Cs Apply</p>
-                <p>Socials</p>
+                <div>
+                <i class="fa-brands fa-facebook icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+                <i class="fab fa-twitter icon"></i>
+                </div>
             </footer>
         </div>
     

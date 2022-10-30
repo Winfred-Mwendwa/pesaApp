@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import { auth, db, logout } from "../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import Userlog from "../userlog/Userlog";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
+  const [isShown, setIsShown] = useState(false);
+  const handleClick = event => {
+    setIsShown(current => !current)
+  };
   const fetchUserName = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -26,20 +31,76 @@ function Dashboard() {
     fetchUserName();
   }, [user, loading]);
   return (
-    <div className="dashboard">
-       <div className="dashboard__container">
-        Logged in as
-         <div>{name}</div>
-         <div>{user?.email}</div>
-         <button className="dashboard__btn" onClick={logout}>
-          Logout
-         </button>
-       </div>
-<div>
-  <img src="/src/wallet.svg" alt="wallet" />
-</div>
+    
+    <div class="container text-center">
+      
+            <div>
+            <header>
 
-     </div>
+<nav class="navbar">
+<img src="/src/logo_transparent.png" alt="pesaApp logo" className='logo img-fluid' />
+               <div>
+               <button className="btn" onClick={handleClick}><i class="fa-solid fa-user user-icon"></i> </button>
+                {isShown&& <Userlog />}
+               </div>
+               
+               
+       
+               <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+               </div>
+            </nav>
+
+
+
+		</header>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div className=' mt-5' id='tagline'>
+                        <h1 className='tag'>
+                            Welcome, {name} 
+                        </h1>
+                        <div className="p-4">
+                          Available Account Balance:
+                        </div>
+                        <div className="p-5 fs-1">
+                          00.00KSh
+                        </div>
+                        <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <Link to='/payments'><button className="btn">Send</button></Link>
+      
+    </div>
+    <div class="col-sm">
+
+      <Link to='/topup'><button className="btn">Top up</button></Link>
+    </div>
+  </div>
+</div>
+                </div>
+                </div>
+                <div class="col">
+                    <div className='transfer-image '>
+                        <img src="/src/wallet.svg" alt="mobile money transfer" />
+                    </div>
+                </div>
+            </div>
+            <footer className='text-center fixed-bottom'>
+                <p>Contact Support</p>
+                <p>Ts and Cs Apply</p>
+                <div>
+                <i class="fa-brands fa-facebook icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+                <i class="fab fa-twitter icon"></i>
+                </div>
+            </footer>
+        </div>
+
   );
 }
 export default Dashboard;
