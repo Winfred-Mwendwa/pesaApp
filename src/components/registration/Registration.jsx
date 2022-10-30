@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 function RegistrationForm() {
     
-    const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,25 +15,16 @@ function RegistrationForm() {
   const [loginPassword, setLoginPassword] = useState("");
   const [phone, setPhone] = useState("");
 
-  
-
-    
-
-    
-
-    return(
-        <div>
-            
-
-
-              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">User Registration</h1>
-        <button type="button" class="btn-close btn" data-dismiss="modal" aria-label="Close">close</button>
+  return(
+    <div>
+      <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <p className="modal-title" id="exampleModalToggleLabel">User Registration</p>
+        <button type="button" className="btn-close btn" data-dismiss="modal" aria-label="Close">close</button>
       </div>
-      <div class="modal-body">
+      <div className="modal-body">
       <div className="container-fluid" >
       <div className="row">
         <div className="col col-2"></div>
@@ -105,9 +96,6 @@ function RegistrationForm() {
         <div className="col-col-2"></div>
       </div>
     </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-target="#exampleModalToggle2" data-toggle="modal"><Link to="/login" >Already have an account? Log in</Link></button>
       </div>
     </div>
   </div>
