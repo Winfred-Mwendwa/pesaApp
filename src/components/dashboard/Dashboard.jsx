@@ -53,10 +53,10 @@ function Dashboard() {
             <h1 className='tag'>
               Welcome, {name} 
             </h1>
-            <div className="p-4">
+            <div className="p-1">
               Available Account Balance:
             </div>
-            <div className="p-5 fs-1">
+            <div className="p-1 fs-1">
               00.00KSh
             </div>
             <div className="container">
@@ -73,7 +73,7 @@ function Dashboard() {
         </div>
         <div className="col-md-6 even-columns">
           <div className='transfer-image '>
-            <img src="https://live.staticflickr.com/65535/52463944852_a9050e7992_z.jpg" width="600" height="400" alt="18"/>
+            <img src="https://live.staticflickr.com/65535/52463944852_a9050e7992_z.jpg" alt="wallet"/>
           </div>
         </div>
       </div>
