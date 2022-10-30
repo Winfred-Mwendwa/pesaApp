@@ -38,7 +38,7 @@ function Dashboard() {
             <header>
 
 <nav class="navbar">
-<img src="/images/logo_transparent.png" alt="pesaApp logo" className='logo img-fluid' />
+<img src="https://live.staticflickr.com/65535/52464860390_f03c9dfcda.jpg" width="150" height="150" alt="pesaApp logo"/>
                <div>
                <button className="btn" onClick={handleClick}><i class="fa-solid fa-user user-icon"></i> </button>
                 {isShown&& <Userlog />}
