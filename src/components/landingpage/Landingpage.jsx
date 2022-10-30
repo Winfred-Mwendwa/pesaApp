@@ -2,7 +2,7 @@ import React from "react";
 import '../../App.css'
 import Header from "../header";
 import RegistrationForm from "../registration/Registration";
-import Typical from 'react-typical'
+
 
 function Landingpage () {
     return (
@@ -22,12 +22,7 @@ function Landingpage () {
                             <li>Top up</li>
                             <li>Send!</li>
                         </ol>
-                        <Typical
-        steps={['Fast', 1000, 'Secure', 500, 'Seamless', 1000]}
-        loop={Infinity}
-        wrapper="h1"
-        
-      />
+                        
                     <div>
                         <RegistrationForm />
                     </div>
