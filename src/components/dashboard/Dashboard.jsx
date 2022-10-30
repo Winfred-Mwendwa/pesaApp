@@ -86,7 +86,7 @@ function Dashboard() {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/images/wallet.svg" alt="mobile money transfer" />
+                    <img src="https://live.staticflickr.com/65535/52463944852_a9050e7992_z.jpg" width="600" height="400" alt="18"/>
                     </div>
                 </div>
             </div>
