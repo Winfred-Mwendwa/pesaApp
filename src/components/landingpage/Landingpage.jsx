@@ -30,7 +30,7 @@ function Landingpage () {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" className="img-fluid" />
+                        <img src="/images/moneytransfer.svg" alt="mobile money transfer" className="img-fluid" />
                     </div>
                 </div>
             </div>

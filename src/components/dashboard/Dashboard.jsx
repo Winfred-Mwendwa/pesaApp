@@ -38,7 +38,7 @@ function Dashboard() {
             <header>
 
 <nav class="navbar">
-<img src="/src/logo_transparent.png" alt="pesaApp logo" className='logo img-fluid' />
+<img src="/images/logo_transparent.png" alt="pesaApp logo" className='logo img-fluid' />
                <div>
                <button className="btn" onClick={handleClick}><i class="fa-solid fa-user user-icon"></i> </button>
                 {isShown&& <Userlog />}
@@ -86,7 +86,7 @@ function Dashboard() {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/src/wallet.svg" alt="mobile money transfer" />
+                        <img src="/images/wallet.svg" alt="mobile money transfer" />
                     </div>
                 </div>
             </div>
