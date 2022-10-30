@@ -30,11 +30,11 @@ function Landingpage () {
                 </div>
                 <div class="col">
                     <div className='transfer-image '>
-                        <img src="/src/moneytransfer.svg" alt="mobile money transfer" className="img-fluid" />
+                    <img src="https://live.staticflickr.com/65535/52464923565_a8355368f4_w.jpg" width="400" height="301" alt="Money transfer _Monochromatic"/>
                     </div>
                 </div>
             </div>
-            <footer className='text-center fixed-bottom'>
+            <footer className='text-center'>
                 <p>Contact Support</p>
                 <p>Ts and Cs Apply</p>
                 <div>
