@@ -6,13 +6,12 @@ import RegistrationForm from "../registration/Registration";
 
 function Landingpage () {
     return (
-        <div class="container text-center">
+        <div className="container text-center">
             <div>
-            <Header />
-
+                <Header />
             </div>
-            <div class="row">
-                <div class="col">
+            <div className="row">
+                <div className="col-md-6 even-columns">
                     <div className=' mt-5' id='tagline'>
                         <h1 className='tag'>
                             Send money in three easy steps! 
@@ -22,25 +21,24 @@ function Landingpage () {
                             <li>Top up</li>
                             <li>Send!</li>
                         </ol>
-                        
-                    <div>
-                        <RegistrationForm />
+                        <div>
+                            <RegistrationForm />
+                        </div>
                     </div>
                 </div>
-                </div>
-                <div class="col">
+                <div className="col-md-6 even-columns">
                     <div className='transfer-image '>
-                    <img src="https://live.staticflickr.com/65535/52464923565_a8355368f4_w.jpg" width="400" height="301" alt="Money transfer _Monochromatic"/>
+                        <img src="https://live.staticflickr.com/65535/52464923565_a8355368f4_w.jpg" width="400" height="301" alt="Money transfer _Monochromatic"/>
                     </div>
                 </div>
             </div>
-            <footer className='text-center'>
+            <footer className='text-center fixed-bottom'>
                 <p>Contact Support</p>
                 <p>Ts and Cs Apply</p>
                 <div>
-                <i class="fa-brands fa-facebook icon"></i>
-                <i class="fa-brands fa-instagram icon"></i>
-                <i class="fab fa-twitter icon"></i>
+                    <i className="fa-brands fa-facebook icon"></i>
+                    <i className="fa-brands fa-instagram icon"></i>
+                    <i className="fab fa-twitter icon"></i>
                 </div>
             </footer>
         </div>
