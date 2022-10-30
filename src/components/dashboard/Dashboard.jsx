@@ -36,7 +36,7 @@ function Dashboard() {
         <header>
           <nav className="navbar">
             <div className="mt-1">
-            <img src="https://live.staticflickr.com/65535/52464860390_f03c9dfcda.jpg" width="150" height="150" alt="pesaApp logo"/>
+            <img src="https://live.staticflickr.com/65535/52464860390_f03c9dfcda.jpg" width="100" height="100" alt="pesaApp logo"/>
 
             </div>
             
@@ -48,7 +48,7 @@ function Dashboard() {
 		    </header>
       </div>
       <div className="row">
-        <div className="col-md-6 even-column">
+        <div className="col-md-6 even-columns">
           <div className=' mt-5' id='tagline'>
             <h1 className='tag'>
               Welcome, {name} 
@@ -71,15 +71,15 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-md-6 even-column">
+        <div className="col-md-6 even-columns">
           <div className='transfer-image '>
             <img src="https://live.staticflickr.com/65535/52463944852_a9050e7992_z.jpg" width="600" height="400" alt="18"/>
           </div>
         </div>
       </div>
       <footer className='text-center fixed-bottom'>
-        <p>Contact Support</p>
-        <p>Ts and Cs Apply</p>
+        <p>Contact <a href="#">Support</a></p>
+        <p><a href="#">Ts and Cs</a> Apply</p>
         <div>
           <i className="fa-brands fa-facebook icon"></i>
           <i className="fa-brands fa-instagram icon"></i>
