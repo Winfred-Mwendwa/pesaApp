@@ -31,7 +31,7 @@ export const db = getFirestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const auth = firebase.auth();
-export default firebase;
+
 
 export const signInWithGoogle = async () => {
   try {
@@ -87,3 +87,5 @@ export const registerWithEmailAndPassword = async (name, email, password) => {
  export const logout = () => {
    auth.signOut();
  };
+
+ export default firebase;

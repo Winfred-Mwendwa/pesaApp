@@ -39,7 +39,7 @@ function Userlog() {
         <div>{user?.email}</div>
         <button className="dashboard__btn" onClick={logout}>
           Logout
-        </button>
+         </button>
       </div>
     </div>
   );
