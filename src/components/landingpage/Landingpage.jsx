@@ -34,7 +34,7 @@ function Landingpage () {
                     </div>
                 </div>
             </div>
-            <footer className='text-center fixed-bottom'>
+            <footer className='text-center'>
                 <p>Contact Support</p>
                 <p>Ts and Cs Apply</p>
                 <div>
