@@ -13,7 +13,7 @@ function Paymentportal  ()  {
           className="payment__textBox"
           
          
-          placeholder="Recepient E-mail or Phone Number"
+          placeholder="Recepient E-mail or Phone"
         />
         <input
           type="number"

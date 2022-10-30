@@ -12,7 +12,7 @@ function Landingpage () {
             </div>
             <div className="row">
                 <div className="col-md-6 even-columns">
-                    <div className=' mt-5' id='tagline'>
+                    <div className='mt-3' id='tagline'>
                         <h1 className='tag'>
                             Send money in three easy steps! 
                         </h1>
