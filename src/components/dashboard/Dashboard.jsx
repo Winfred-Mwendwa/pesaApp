@@ -78,7 +78,7 @@ function Dashboard() {
         </div>
       </div>
       <div className="row">
-                <div className="col-md-6 even-columns" id='tagline'>
+                <div className="col-md-6 even-columns" >
                     <div className='mt-5 text' >
                         <p className='tag'>
                              pesaPoints
