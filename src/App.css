@@ -73,29 +73,20 @@ picture, svg {
 body {
     font-family: 'Rubik', sans-serif;
 }
-.content-home {
-  height: 700px;
- 
-  
-}
 
 h1 {
     color: #266A61;
     
 }
 
-
-
 .btn {
     color: #FFFFFF;
     background-color:  #266A61;
-    }
+   }
 
 footer {
   background-color:  #266A61;
-  
   width:100%;
-  
 }
 
 .icon {
@@ -107,10 +98,48 @@ footer {
   color: white;
   cursor: pointer;
 }
-.even-columns {
-  height: 100vh;
-  width:100vw;
+
+.tag {
+  font-size:54px;
+  color:  #266A61;
+}
+
+h2 {
+  font-size:18px;
+}
+
+.image-background {
+  background-color:  #266A61;
+  
+}
+
+.text {
+  padding:15rem 0px;
+  text-align:center;
+  background-color:
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+
+  .text {
+    background-color: #E5E5E5;
+  }
+  #tagline {
+    background-color: #E5E5E5;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+  .desktop-bg-color {
+    background-color: #E5E5E5;
+  }
 }
 
 
-    
+
