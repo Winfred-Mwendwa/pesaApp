@@ -48,15 +48,15 @@ function Dashboard() {
 		    </header>
       </div>
       <div className="row">
-        <div className="col-md-6 even-columns">
-          <div className=' mt-5' id='tagline'>
+        <div className="col-md-6 even-columns " id='tagline'>
+          <div className=' mt-5' >
             <h1 className='tag'>
               Welcome, {name} 
             </h1>
-            <div className="p-1">
+            <div className="p-2">
               Available Account Balance:
             </div>
-            <div className="p-1 fs-1">
+            <div className="p-2 fs-1">
               00.00KSh
             </div>
             <div className="container">
@@ -71,12 +71,29 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-md-6 even-columns">
+        <div className="col-md-6 even-columns d-flex align-items-center justify-content-center">
           <div className='transfer-image '>
             <img src="https://live.staticflickr.com/65535/52463944852_a9050e7992_z.jpg" alt="wallet"/>
           </div>
         </div>
       </div>
+      <div className="row">
+                <div className="col-md-6 even-columns" id='tagline'>
+                    <div className='mt-5 text' >
+                        <p className='tag'>
+                             pesaPoints
+                        </p>
+                        <h2 className="p-4">Earn pesaPoints with every transaction which you can redeem to send and spend!</h2>
+                        <div>
+                            <button className="btn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6 even-columns d-flex align-items-center justify-content-center">
+                    <div className='img-background '>
+                    <img src="https://live.staticflickr.com/65535/52466606921_4785e6e282_w.jpg" width="400" height="267" alt="Trophy"/>
+                    </div>
+            </div>
       <footer className='text-center fixed-bottom'>
         <p>Contact <a href="#">Support</a></p>
         <p><a href="#">Ts and Cs</a> Apply</p>
@@ -87,7 +104,7 @@ function Dashboard() {
         </div>
       </footer>
     </div>
-
+</div>
   );
 }
 export default Dashboard;

@@ -11,14 +11,11 @@ function Paymentportal  ()  {
         <input
           type="text"
           className="payment__textBox"
-          
-         
           placeholder="Recepient E-mail or Phone"
         />
         <input
           type="number"
           className="payment__textBox"
-          
           placeholder="Amount"
         />
         <button
@@ -30,11 +27,9 @@ function Paymentportal  ()  {
             You will receive an M-PESA STK pop-up notification to authorize the transaction
           </p>
         </div>
-        
         <div>
         <Link to="/dashboard">Back to Home</Link>
         </div>
-        
       </div>
     </div>
   )
