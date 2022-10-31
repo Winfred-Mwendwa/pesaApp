@@ -11,7 +11,7 @@ function Landingpage () {
                 <Header />
             </div>
             <div className="row">
-                <div className="col-md-6 even-columns " id='tagline'>
+                <div className="col-md-6 even-columns text-background" >
                     <div className='mt-5' >
                         <p className='tag'>
                             Send money in three easy steps! 
@@ -28,8 +28,8 @@ function Landingpage () {
                     
             </div>
             
-                <div className="col-md-6 even-columns text">
-                    <div className='mt-5' id='tagline'>
+                <div className="col-md-6 even-columns text-background">
+                    <div className='mt-5'>
                         <p className='tag'>
                             Fast and secure 
                         </p>
@@ -46,7 +46,7 @@ function Landingpage () {
                 </div>
             
             
-                <div class="col-md-6 even-columns text">
+                <div class="col-md-6 even-columns text-background">
                     <p className="tag">Pay Friends</p>
                     <h2 className="p-5">Whether you're out for lunch with friends or paying for utilities with your roommate, splitting the bill has never been easier with pesaApp.</h2>
                     <button className="btn">Learn More</button>
@@ -58,7 +58,7 @@ function Landingpage () {
                 </div>
             
            
-                <div className="col-md-6 even-columns mx-auto text">
+                <div className="col-md-6 even-columns mx-auto text-background">
                     <div className="">
                         <p className="tag">Send Gifts</p>
                     <h2 className="p-5">Set up custom notifications for events or auto-send gifts for that special occasion. Never forget a birthday again!</h2>
@@ -72,7 +72,7 @@ function Landingpage () {
                 </div>
             
             
-                <div className="even-columns text-center text movement">
+                <div className="even-columns text-center movement-text text-background">
                     <h2>Join the Movement, start using pesaApp today!</h2>
                     <div>
                             <RegistrationForm />
