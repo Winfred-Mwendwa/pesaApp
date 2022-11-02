@@ -27,9 +27,13 @@
     margin-bottom: 10px;
     border: none;
     color: white;
-    background-color: #266A61;
+    background-color: black;
   }
   
   .payment div {
     margin-top: 7px;
+  }
+
+  .btn-topup {
+    background-color: black;
   }

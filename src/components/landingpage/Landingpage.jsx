@@ -47,9 +47,11 @@ function Landingpage () {
             
             
                 <div class="col-md-6 even-columns text-background">
-                    <p className="tag">Pay Friends</p>
-                    <h2 className="p-5">Whether you're out for lunch with friends or paying for utilities with your roommate, splitting the bill has never been easier with pesaApp.</h2>
-                    <button className="btn">Learn More</button>
+                    <div className="mt-5">
+                        <p className="tag">Pay Friends</p>
+                        <h2 className="p-5">Whether you're out for lunch with friends or paying for utilities with your roommate, splitting the bill has never been easier with pesaApp.</h2>
+                        <button className="btn">Learn More</button>
+                    </div>
                 </div>
                 <div class="col-md-6 even-columns d-flex align-items-center justify-content-center">
                     <div className='img-background'>
@@ -59,9 +61,9 @@ function Landingpage () {
             
            
                 <div className="col-md-6 even-columns mx-auto text-background">
-                    <div className="">
+                    <div className="mt-5">
                         <p className="tag">Send Gifts</p>
-                    <h2 className="p-5">Set up custom notifications for events or auto-send gifts for that special occasion. Never forget a birthday again!</h2>
+                        <h2 className="p-5">Set up custom notifications for events or auto-send gifts for that special occasion. Never forget a birthday again!</h2>
                     </div>
                     <button className="btn">Learn More</button>
                 </div>
