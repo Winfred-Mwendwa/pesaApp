@@ -14,3 +14,23 @@
     height: 100vh;
     width:100vw;
   }
+
+  .dummy-columns {
+    height:200px;
+    background-color: #E5E5E5;
+  }
+
+  .add-button {
+    background-color: white;
+    border-radius:50%;
+    padding:10px;
+    cursor:pointer;
+  }
+
+  .referral-code {
+      color: #266A61;
+  }
+
+  .down-arrow {
+    cursor:pointer;
+  }

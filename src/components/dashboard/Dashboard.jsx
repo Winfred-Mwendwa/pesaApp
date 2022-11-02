@@ -65,7 +65,7 @@ function Dashboard() {
                   <Link to='/payments'><button className="btn">Send</button></Link> 
                 </div>
                 <div className="col">
-                  <Link to='/topup'><button className="btn">Top up</button></Link>
+                  <Link to='/topup'><button className="btn btn-topup">Top up</button></Link>
                 </div>
               </div>
             </div>
@@ -77,13 +77,29 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-6 dummy-columns d-flex align-items-center justify-content-center">
+          <div className="">
+          <p className="tag">Send to friends</p>
+          <i class="fa-solid fa-plus add-button"></i>
+          </div>
+
+        </div>
+        <div class="col-md-6 dummy-columns d-flex align-items-center justify-content-center">
+          <div className="">
+          <p className="tag">History</p>
+          <h2>View your transaction history <i class="fa-solid fa-angle-down down-arrow"></i></h2>
+          </div>
+        </div>
+      </div>
       <div className="row">
                 <div className="col-md-6 even-columns" >
-                    <div className='mt-5 text' >
+                    <div className='mt-5' >
                         <p className='tag'>
                              pesaPoints
                         </p>
                         <h2 className="p-4">Earn pesaPoints with every transaction which you can redeem to send and spend!</h2>
+                        <h2>Refer pesaApp to your friends and earn pesaPoints! Your referall code is <span className="referral-code">PAY2398Xe</span></h2>
                         <div>
                             <button className="btn">Learn More</button>
                         </div>
@@ -93,7 +109,8 @@ function Dashboard() {
                     <div className='img-background '>
                     <img src="https://live.staticflickr.com/65535/52466606921_4785e6e282_w.jpg" width="400" height="267" alt="Trophy"/>
                     </div>
-            </div>
+                  </div>
+                  
       <footer className='text-center fixed-bottom'>
         <p>Contact <a href="#">Support</a></p>
         <p><a href="#">Ts and Cs</a> Apply</p>
